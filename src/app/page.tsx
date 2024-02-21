@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "../styles/page.module.css";
 import api from "../lib/api";
 
@@ -27,6 +27,21 @@ const App: React.FC = () => {
         console.log(error);
       });
   }, []);
+
+  const handleMore = useCallback(async () => {
+    try {
+      const offset = characters.length;
+      const response = await api.get("/characters", {
+        params: {
+          offset,
+        },
+      });
+
+      setCharacters([...characters, ...response.data.data.results]);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [characters]);
 
   return (
     <div className={styles.container}>
@@ -56,6 +71,9 @@ const App: React.FC = () => {
             ))}
           </tbody>
         </table>
+        <button onClick={handleMore} className={styles.loadMoreButton}>
+          Load More
+        </button>
       </div>
     </div>
   );

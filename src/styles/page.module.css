@@ -13,11 +13,12 @@ body {
 }
 
 .tableContainer {
+  display: block;
   max-width: 1000px; /* Define a largura máxima do contêiner da tabela */
 }
 
 .table {
-  min-width: 600px;
+  min-width: 500px;
   width: 100%;
   border-collapse: collapse;
 }
@@ -31,6 +32,7 @@ body {
 }
 
 .tableContainer h1 {
+  color: #FFF;
   font-size: 36px;
   text-align: center;
 }
@@ -48,6 +50,28 @@ body {
 }
 
 .characterImage {
-  width: 450px;
+  width: 300px;
   height: auto;
+
+  transition: all 0.8s ease-in-out;
+}
+
+.table td {
+  position: relative; /* Define a posição relativa para a célula da tabela */
+}
+
+.table td img:hover {
+  width: 450px;
+  height: 100%;
+}
+
+.loadMoreButton {
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  font-size: 24px;
+  justify-content: center;
+  border-radius: 5px;
+  background: #EEEEEE;
+  color: #970505;
 }
