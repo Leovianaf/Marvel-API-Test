@@ -29,17 +29,34 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Characters</h1>
-      {characters.map((character) => {
-        return (
-          <div key={character.id} className={styles.character}>
-            <h2>{character.name}</h2>
-            <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
-            <p>{character.description}</p>
-          </div>
-        );
-      })}
+    <div className={styles.container}>
+      <div className={styles.tableContainer}>
+        <h1>Characters</h1>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            {characters.map((character) => (
+              <tr key={character.id}>
+                <td className={styles.characterNameCell}>{character.name}</td>
+                <td className={styles.characterDescriptionCell}>{character.description}</td>
+                <td>
+                  <img
+                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                    alt={character.name}
+                    className={styles.characterImage}
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

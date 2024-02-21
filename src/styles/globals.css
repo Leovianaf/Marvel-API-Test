@@ -1,4 +1,7 @@
-:root {
+.tableContainer:root {
   --primary-color: #970505;
+  --secondary-color: #e05a5a;
   --white-color: #FFF;
+  --light-gray-color: #EEEEEE;
+  --blue: #0860be;
 }

@@ -10,7 +10,8 @@ Repositório com o projeto do teste técnico proposto para a vaga de estágio na
 * NextJs (React)
 
 ### Passo a passo para instalação e execução
-1. 
-2. 
-3. 
+1. npm i
+2. npm run dev
 
+### Deploy do projeto
+* O site está hospedado no Vercel e pode ser visualizado através do seguinte [link](https://testetecnico2024-leonardo-e6kgepagn-leovianafs-projects.vercel.app/).

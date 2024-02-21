@@ -1,5 +1,53 @@
-.body {
+/* eslint-disable-next-line
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+  background: #970505;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tableContainer {
+  max-width: 1000px; /* Define a largura máxima do contêiner da tabela */
+}
+
+.table {
+  min-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  background: #e05a5a;
+  border: 1px solid #EEEEEE;
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.tableContainer h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.table th {
+  font-size: 24px;
+}
+
+.characterNameCell {
+  max-width: 300px;
+}
+
+.characterDescriptionCell {
+  max-width: 350px;
+}
+
+.characterImage {
+  width: 450px;
+  height: auto;
 }
