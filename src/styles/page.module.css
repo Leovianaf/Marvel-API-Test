@@ -33,7 +33,7 @@ body {
 
 .tableContainer h1 {
   color: #FFF;
-  font-size: 36px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -52,7 +52,6 @@ body {
 .characterImage {
   width: 300px;
   height: auto;
-
   transition: all 0.8s ease-in-out;
 }
 
@@ -74,4 +73,44 @@ body {
   border-radius: 5px;
   background: #EEEEEE;
   color: #970505;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.loadMoreButton:hover {
+  background: #970505;
+  color: #FFF;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.searchInput {
+  width: 250px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 20px;
+  border: 1px solid #970505;
+  border-radius: 5px;
+}
+
+.searchButton {
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  font-size: 20px;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background: #EEEEEE;
+  color: #970505;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  background: #970505;
+  color: #FFF;
 }
