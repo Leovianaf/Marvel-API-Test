@@ -21,7 +21,7 @@ const App: React.FC = () => {
       .then((response) => {
         const fetchedCharacters: ResponseData[] = response.data.data.results;
         setCharacters(fetchedCharacters);
-        console.log("Characters: ", fetchedCharacters);
+        // console.log("Characters: ", fetchedCharacters);
       })
       .catch((error) => {
         console.log(error);
@@ -35,10 +35,7 @@ const App: React.FC = () => {
         return (
           <div key={character.id} className={styles.character}>
             <h2>{character.name}</h2>
-            <img
-              src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-              alt={character.name}
-            />
+            <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
             <p>{character.description}</p>
           </div>
         );
