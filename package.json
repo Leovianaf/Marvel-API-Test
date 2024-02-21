@@ -19,6 +19,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
     "md5": "^2.3.0",
     "typescript": "^5"
   }

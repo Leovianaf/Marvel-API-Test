@@ -1,31 +1,48 @@
 "use client"
-import React, { useEffect} from "react";
-import axios from 'axios';
-import md5 from 'md5';
+import React, { use, useEffect, useState} from "react";
 import styles from "../styles/page.module.css";
+import api from "../lib/api";
 
 const baseURL = 'https://gateway.marvel.com/v1/public/characters';
 
-const publicKey = '7a739c443e8db9e71695f3684c46ae18';
-const privateKey = '4dad93e2b1cb357bd3af762d053b49fd7f0334ad';
-const ts = new Date().getTime();
-
-const hash = md5(ts + privateKey + publicKey);
+interface ResponseData {
+  id: string;
+  name: string;
+  description: string;
+  thumbnail: {
+    path: string;
+    extension: string;
+  };
+}
 
 const App: React.FC = () => {
+  const [characters, setCharacters] = useState<ResponseData[]>([]);
   useEffect(() => {
-    axios.get(`${baseURL}?ts=${ts}&apikey=${publicKey}&hash=${hash}`)
-      .then((response) => {
-        console.log(response.data.data);
+    api
+      .get('/characters')
+      .then(response => {
+      const fetchedCharacters: ResponseData[] = response.data.data.results;
+      setCharacters(fetchedCharacters);
+      console.log("Characters: ", fetchedCharacters); 
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
+
   return (
       <div>
-        Hello World!!
+        <h1>Characters</h1>
+        {characters.map((character) => {
+          return (
+            <div key={character.id} className={styles.character}>
+              <h2>{character.name}</h2>
+              <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+              <p>{character.description}</p>
+            </div>
+          );
+        })}
       </div>
   );
 };
