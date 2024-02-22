@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Descrição geral:
 Repositório com o projeto do teste técnico proposto para a vaga de estágio na empresa Merx Energia, feito por Leonardo Viana.
 
+### Deploy do projeto
+* O site está hospedado no Vercel e pode ser visualizado através do seguinte [link](https://testetecnico2024-leonardo.vercel.app/).
+
 ### Funcionalidades
 
 * Lista todos os personagens retornados na requisição da API.
@@ -44,17 +47,14 @@ NEXT_PUBLIC_PRIVATE_KEY={your_key}
 npm run dev
 ```
 
-### Deploy do projeto
-* O site está hospedado no Vercel e pode ser visualizado através do seguinte [link](https://testetecnico2024-leonardo.vercel.app/).
-
 ### Tela inicial do App
-![Preview Teste Tecnico](assets/img/Tela1.png)
+![Preview Teste Tecnico1](/src/assets/img/Tela1.png)
 
 ### Filtrando apenas pela descrição
-![Preview Teste Tecnico](assets/img/Tela2.png)
+![Preview Teste Tecnico2](/src/assets/img/Tela2.png)
 
 ### Filtrando apenas pela imagem
-![Preview Teste Tecnico](assets/img/Tela3.png)
+![Preview Teste Tecnico3](/src/assets/img/Tela3.png)
 
 ### Filtrando pela descrição e pela imagem
-![Preview Teste Tecnico](assets/img/Tela4.png)
+![Preview Teste Tecnico4](/src/assets/img/Tela4.png)
