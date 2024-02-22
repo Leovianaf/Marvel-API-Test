@@ -61,6 +61,6 @@ npm run dev
 ![Preview Teste Tecnico4](/src/assets/img/Tela4.png)
 
 ## Preview em mobile
-![Preview Teste Tecnico Mobile1](/src/assets/img/TelaMobile1.png)
+![Preview Teste Tecnico Mobile1](/src/assets/img/TelaMobile1.jpeg)
 
-![Preview Teste Tecnico Mobile2](/src/assets/img/TelaMobile2.png)
+![Preview Teste Tecnico Mobile2](/src/assets/img/TelaMobile2.jpeg)
