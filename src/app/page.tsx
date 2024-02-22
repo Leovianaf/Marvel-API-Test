@@ -16,6 +16,8 @@ interface ResponseData {
 const App: React.FC = () => {
   const [characters, setCharacters] = useState<ResponseData[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [showWithDescription, setShowWithDescription] = useState(false);
+  const [showWithImage, setShowWithImage] = useState(false);
 
   useEffect(() => {
     api
@@ -53,13 +55,22 @@ const App: React.FC = () => {
             nameStartsWith: searchTerm,
           },
         });
+        let filteredCharacters = response.data.data.results;
+        if (showWithDescription) {
+          filteredCharacters = filteredCharacters.filter((character: ResponseData) => character.description !== "");
+        }
+        if (showWithImage) {
+          filteredCharacters = filteredCharacters.filter((character: ResponseData) => {
+            return !character.thumbnail.path.includes("image_not_available");
+          });
+        }
 
-        setCharacters(response.data.data.results);
+        setCharacters(filteredCharacters);
       } catch (error) {
         console.log(error);
       }
     },
-    [searchTerm],
+    [searchTerm, showWithDescription, showWithImage],
   );
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,6 +93,21 @@ const App: React.FC = () => {
             Search
           </button>
         </form>
+        <div className={styles.filterContainer}>
+          <h2>Choose any filter:</h2>
+          <label>
+            <input type="checkbox" checked={showWithImage} onChange={(e) => setShowWithImage(e.target.checked)} />
+            Show only characters with image
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showWithDescription}
+              onChange={(e) => setShowWithDescription(e.target.checked)}
+            />
+            Show only characters with description
+          </label>
+        </div>
         <table className={styles.table}>
           <thead>
             <tr>

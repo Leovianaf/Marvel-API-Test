@@ -85,7 +85,9 @@ body {
 .searchForm {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 15px 0;
+  width: 100%;
 }
 
 .searchInput {
@@ -113,4 +115,32 @@ body {
 .searchButton:hover {
   background: #970505;
   color: #FFF;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterContainer h2 {
+  color: #FFF;
+  font-size: 24px;
+  margin: 10px;
+}
+
+.filterContainer input{
+  margin: 0 10px;
+  cursor: pointer;
+  background: #970505;
+  color: #FFF;
+}
+
+.filterContainer input[type="checkbox"]:checked{
+  background: #970505;
+}
+
+.filterContainer label {
+  color: #FFF;
+  font-size: 20px;
 }
