@@ -14,6 +14,7 @@ Repositório com o projeto do teste técnico proposto para a vaga de estágio na
 * Exibe os personagens em uma tabela com seus respectivos nomes, descrições e imagens.
 * Contém uma barra de busca para buscar um personagem na API.
 * Contém dois filtros para melhor visualização dos mesmos.
+* Media Querys para se adaptar aos dispositivos mobile.
 
 ### Tecnologias Utilizadas
 * Typescript
@@ -58,3 +59,8 @@ npm run dev
 
 ### Filtrando pela descrição e pela imagem
 ![Preview Teste Tecnico4](/src/assets/img/Tela4.png)
+
+## Preview em mobile
+![Preview Teste Tecnico Mobile1](/src/assets/img/TelaMobile1.png)
+
+![Preview Teste Tecnico Mobile2](/src/assets/img/TelaMobile2.png)
